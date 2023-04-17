@@ -53,6 +53,7 @@ all.equal(predict.mars(testmars), testpredict)
 d <- mars(Limit ~ ., data = ISLR::Credit)
 summary(d)
 anova(d)
+predict(d)
 
 # Ex 3.
 d <- mars(Sales ~ ., data = ISLR::Carseats)
