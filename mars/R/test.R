@@ -25,13 +25,12 @@ make_B <- function(X, Bfuncs) {
   #initialize matrix
   B<-matrix(1, nrow = nrow(X), ncol = length(Bfuncs))
   #loop over each row of X
-  for(i in seq_len(nrow(X))){
+  for(i in seq(nrow(X))){
     #loop over each Bfunc
-    for(j in seq_len(length(Bfuncs))){
+    for(j in seq(length(Bfuncs))){
       temp<-1
-      hnum<-length(Bfuncs[[j]][,1])
       #loop over each value in an individual Bfunc
-      for(k in seq_len(hnum)){
+      for(k in seq(nrow(Bfuncs[[j]]))){
         temp<-temp*h(Bfuncs[[j]][k,"s"],X[i,Bfuncs[[j]][k,"v"]],Bfuncs[[j]][k,"t"])
       }
       B[i,j]<-B[i,j]*temp
