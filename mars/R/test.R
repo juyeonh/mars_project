@@ -32,7 +32,7 @@ make_B <- function(X, Bfuncs) {
       hnum<-length(Bfuncs[[j]][,1])
       #loop over each value in an individual Bfunc
       for(k in seq_len(hnum)){
-        temp<-temp*h(Bfuncs[[j]][k,1],X[i,Bfuncs[[j]][k,2]],Bfuncs[[j]][k,3])
+        temp<-temp*h(Bfuncs[[j]][k,"s"],X[i,Bfuncs[[j]][k,"v"]],Bfuncs[[j]][k,"t"])
       }
       B[i,j]<-B[i,j]*temp
     }
