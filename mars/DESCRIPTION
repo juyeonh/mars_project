@@ -1,0 +1,14 @@
+Package: mars
+Title: Multivariate Adaptive Regression Splines (MARS)
+Version: 1.2.0.5198
+Authors@R: c(
+    person("Santiago", "Guerra", email = "sguerra@sfu.ca", role = "cre"),
+    person("Juyeon", "Hong", email = "juyeonh@sfu.ca", role = "aut"))
+Description: Fit Friedman's Multivariate Adaptive Regression Splines (MARS) model.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports: 
+    ISLR,
+    stats
