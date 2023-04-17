@@ -28,12 +28,11 @@ make_B <- function(X, Bfuncs) {
   for(i in seq(nrow(X))){
     #loop over each Bfunc
     for(j in seq(length(Bfuncs))){
-      temp<-1
       #loop over each value in an individual Bfunc
       for(k in seq(nrow(Bfuncs[[j]]))){
-        temp<-temp*h(Bfuncs[[j]][k,"s"],X[i,Bfuncs[[j]][k,"v"]],Bfuncs[[j]][k,"t"])
+        B[,j] <- B[,j]*h(Bfuncs[[j]][k,"s"],X[i,Bfuncs[[j]][k,"v"]],Bfuncs[[j]][k,"t"])
+        
       }
-      B[i,j]<-B[i,j]*temp
     }
   }
   return(B)
