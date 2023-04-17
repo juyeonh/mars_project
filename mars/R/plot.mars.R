@@ -12,25 +12,14 @@ plot.mars <- function(object){
 }
 
 
-
-
-# Using ANOVA..?
-a <- aov(wage ~ age,data=ISLR::Wage)
-summary(a)
-plot(a)
-
-
-
-
-
 # Cumulative dist.
-CDF <- ecdf(abs(mm$residuals))
-plot(CDF)
+#CDF <- ecdf(abs(mm$residuals))
+#plot(CDF)
 
 # linear regression
-plot(lm(mm$y~.-1,data=data.frame(y=mm$y, mm$B)))
+#plot(lm(mm$y~.-1,data=data.frame(y=mm$y, mm$B)))
 
 # QQ
-qqnorm(mm$residuals, pch = 1)
-qqline(mm$residuals, col = "red")
+#qqnorm(mm$residuals, pch = 1)
+#qqline(mm$residuals, col = "red")
 
